@@ -1,0 +1,35 @@
+{
+  "name": "mcp_google-analytics_fsmk-pm",
+  "account_id": "968b2d94c41f28bd35044f4308f29101",
+  "main": "worker.js",
+  "compatibility_date": "2024-01-01",
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "mcp-google-analytics-fsmk-pm.fundingasiagroup.com",
+      "custom_domain": true
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "GOOGLE_ANALYTICS_MCP",
+        "class_name": "GoogleAnalyticsMCP"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["GoogleAnalyticsMCP"]
+    }
+  ],
+  "containers": [
+    {
+      "class_name": "GoogleAnalyticsMCP",
+      "image": "./Dockerfile",
+      "instance_type": "basic",
+      "max_instances": 1
+    }
+  ]
+}

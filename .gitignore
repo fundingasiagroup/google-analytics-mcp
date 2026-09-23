@@ -67,3 +67,12 @@ pylintrc
 pylintrc.test
 
 .agents/skills
+
+adc_credentials.json
+client_secrets.json
+get_refresh_token.py
+generate_refresh_token_for_team.py
+.env
+node_modules/*
+test_connection.py
+test_connection.sh

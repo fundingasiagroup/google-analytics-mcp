@@ -1,0 +1,12 @@
+node_modules
+.env
+adc_credentials.json
+__pycache__
+*.pyc
+.git
+.venv
+test_connection.sh
+test_connection.py
+*.md
+wrangler.json
+worker.js
